@@ -3,54 +3,174 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="V Web Development creates thoughtful web and mobile experiences, from first idea to working product.">
-  <meta name="theme-color" content="#101712">
-  <title>V Web Development — Ideas made digital</title>
+  <meta name="description" content="V Web Development is a small web and mobile app development agency offering remote consultation, demos, prototypes and user testing worldwide.">
+  <meta name="theme-color" content="#170b2e">
+  <title>V Web Development — Web &amp; mobile apps, made with purpose</title>
+  <link rel="icon" href="img/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="V Web Development home"><span class="brand-mark">V<span>.</span></span><span>web<br>development</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open menu"><span></span><span></span></button>
-    <nav id="navigation" aria-label="Main navigation">
-      <a href="#services">What we do</a><a href="#process">How we work</a><a href="#sprint">The sprint</a><a href="#contact" class="nav-cta">Let's talk <span>↗</span></a>
-    </nav>
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="V Web Development home"><img src="img/logo.png" alt="" width="40" height="40"><span>V Web<small>Development</small></span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation" aria-label="Open menu"><span></span><span></span></button>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#services">What we do</a><a href="#process">How we work</a><a href="#sprint">Sprint</a><a href="#plans">Pricing</a><a href="#contact" class="nav-cta">Contact us</a>
+      </nav>
+    </div>
   </header>
+
   <main id="top">
-    <section class="hero wrap">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="status-dot"></span> YOUR DIGITAL PARTNER, ANYWHERE</div>
-        <h1>Good ideas<br>deserve a <em>great</em><br>digital home<span class="accent">.</span></h1>
-        <p>We're a small web and mobile development agency turning ambitious ideas into beautifully functioning digital experiences.</p>
-        <div class="hero-actions"><a class="button button-light" href="#contact">Let's build together <span>↗</span></a><a class="text-link" href="#services">Explore our services <span>↓</span></a></div>
-        <div class="hero-foot"><span class="mini-asterisk">✳</span><span>THOUGHTFULLY MADE<br>FOR THE WAY YOU WORK</span></div>
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span> Remote web &amp; mobile agency · worldwide</div>
+          <h1>Hello, we're a small web &amp; <span class="gradient-text">mobile apps</span> development agency.</h1>
+          <p>We make beautifully functioning web applications and give expert remote technical consultation — from first idea to tested prototype.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Hire us <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost" href="#services">Our services</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>4 days</dt><dd>Idea to prototype</dd></div>
+            <div><dt>5+</dt><dd>Users per test</dd></div>
+            <div><dt>24/7</dt><dd>Remote support</dd></div>
+          </dl>
+        </div>
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="glow"></div>
+          <img class="phone" src="img/app-iPhone.png" alt="" width="420" height="860">
+          <div class="float-card fc-one"><span>✓</span><div><strong>Prototype ready</strong><small>Day 4 · Sprint review</small></div></div>
+          <div class="float-card fc-two"><span>◎</span><div><strong>Remote meeting</strong><small>Google Meet · Crowdcast</small></div></div>
+        </div>
       </div>
-      <div class="hero-art" aria-label="Abstract illustration of a digital project coming together">
-        <div class="art-top"><span>IDEAS IN MOTION</span><span>V / STUDIO 01</span></div>
-        <div class="art-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orb"><span>✳</span></div>
-        <div class="art-card card-one"><span class="card-icon">✳</span><div><strong>From idea</strong><small>Something good starts here.</small></div><span>↗</span></div>
-        <div class="art-card card-two"><span class="check">✓</span><div><strong>To real life</strong><small>Built with purpose.</small></div></div>
-        <div class="art-bottom"><span>STRATEGY &nbsp; / &nbsp; DESIGN &nbsp; / &nbsp; DEVELOPMENT</span><span>✦</span></div>
-      </div>
-      <div class="vertical-note">A LITTLE STUDIO WITH BIG IDEAS &nbsp; ✳ &nbsp; SCROLL TO EXPLORE</div>
+      <a class="scroll-cue" href="#intro" aria-label="Scroll to content"><span></span></a>
     </section>
-    <div class="ticker"><div>GOOD THINKING <span>✳</span> BETTER BUILDING <span>✳</span> MADE FOR PEOPLE <span>✳</span> GOOD THINKING <span>✳</span> BETTER BUILDING <span>✳</span> MADE FOR PEOPLE <span>✳</span></div></div>
-    <section class="services section-light" id="services"><div class="wrap">
-      <div class="section-heading"><div><div class="label"><span>01 / WHAT WE DO</span><span class="label-line"></span></div><h2>Big picture thinking.<br><em>Little detail</em> people.</h2></div><p>From the first conversation to the final click, we help bring your digital ideas to life with care and clarity.</p></div>
-      <div class="service-grid">
-        <article class="service-card"><div class="service-top"><span>01</span><span class="service-icon">✳</span></div><h3>Remote<br>consultation</h3><p>Let's talk through your idea, your goals and the right next steps for your digital project.</p><span class="service-arrow">↗</span></article>
-        <article class="service-card"><div class="service-top"><span>02</span><span class="service-icon">◉</span></div><h3>Web & mobile<br>development</h3><p>Thoughtful, functional applications designed to work beautifully across screens.</p><span class="service-arrow">↗</span></article>
-        <article class="service-card"><div class="service-top"><span>03</span><span class="service-icon">✣</span></div><h3>Prototyping<br>& testing</h3><p>Turn an early idea into something tangible, test it with users and learn as you go.</p><span class="service-arrow">↗</span></article>
+
+    <section class="intro" id="intro">
+      <div class="wrap narrow reveal">
+        <span class="kicker">Get digital</span>
+        <h2>Get digital — and connect with the best.</h2>
+        <p class="lead">We are a small web development agency. We specialise in making beautifully functioning web applications, and we give expert remote technical consultation. <strong>We promise!</strong></p>
       </div>
-    </div></section>
-    <section class="process wrap" id="process"><div class="process-intro"><div class="label"><span>02 / HOW WE WORK</span><span class="label-line"></span></div><h2>From “what if”<br>to <em>what's next.</em></h2><p>Great things start with a conversation. We work remotely and collaboratively to make the journey from idea to application feel a little simpler.</p><a class="button button-outline" href="#contact">Start a conversation <span>↗</span></a></div><div class="process-list"><div><span>01</span><h3>Let's get to know your idea</h3><p>We listen, ask questions and get to the heart of what you want to make.</p></div><div><span>02</span><h3>Make it tangible</h3><p>We sketch, create a demo and build a prototype to explore the possibilities.</p></div><div><span>03</span><h3>Test, learn and refine</h3><p>With user feedback and a considered review, we bring the details together.</p></div></div></section>
-    <section class="sprint section-light" id="sprint"><div class="wrap"><div class="section-heading"><div><div class="label"><span>03 / THE DEVELOPMENT SPRINT</span><span class="label-line"></span></div><h2>One idea. <em>Four days.</em><br>Lots of possibility.</h2></div><p>Our sprint approach brings people and ideas together to move from a conversation to a tested prototype.</p></div><div class="sprint-grid"><article><span>DAY 01</span><div>↗</div><h3>Discover</h3><p>Meet, share ideas and define the challenge together.</p></article><article><span>DAY 02</span><div>✳</div><h3>Imagine</h3><p>Sketch possibilities and start creating a demo.</p></article><article><span>DAY 03</span><div>◫</div><h3>Map it out</h3><p>Explore ideas and bring the story into focus.</p></article><article><span>DAY 04</span><div>✓</div><h3>Make & test</h3><p>Build a prototype, test with users and review.</p></article></div></div></section>
-    <section class="contact wrap" id="contact"><div><div class="label"><span>04 / SAY HELLO</span><span class="label-line"></span></div><h2>Have a good idea?<br><em>Let's make it real.</em></h2><p>Tell us a little about what you're dreaming up. We'd love to hear about it.</p></div><form name="contact" method="POST" data-netlify="true" action="/thanks.html"><input type="hidden" name="form-name" value="contact"><label for="name">Your name</label><input id="name" name="name" required placeholder="What should we call you?"><label for="email">Email address</label><input id="email" type="email" name="email" required placeholder="you@example.com"><label for="message">Tell us about your project</label><textarea id="message" name="message" required placeholder="A little about your idea..."></textarea><button class="button button-light" type="submit">Send your message <span>↗</span></button></form></section>
+    </section>
+
+    <section class="services" id="services">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="kicker">01 · What we do</span><h2>Everything your idea needs<br>to become real.</h2></div>
+        <div class="service-grid">
+          <article class="service-card reveal"><div class="service-icon">◎</div><span class="service-num">01</span><h3>Remote consultation</h3><p>Our core services build on a remote consultation session tailored to your digital needs, wherever you are in the world.</p></article>
+          <article class="service-card reveal"><div class="service-icon">✦</div><span class="service-num">02</span><h3>Creating a demo</h3><p>After our initial meeting we create a demo application for user testing and idea validation.</p></article>
+          <article class="service-card reveal"><div class="service-icon">◧</div><span class="service-num">03</span><h3>Creating a prototype</h3><p>With the look and feel agreed, we build a working prototype so real users can put your idea to the test.</p></article>
+          <article class="service-card reveal"><div class="service-icon">✓</div><span class="service-num">04</span><h3>Reviewing the application</h3><p>The final step: we finalise the project, including any data hooks and integrations it needs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="Our work">
+      <ul>
+        <li><img src="img/1.jpg" alt="Isometric illustration of a mobile app being designed" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/2.jpg" alt="Laptop with code on screen" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/3.jpg" alt="Glowing server racks" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/4.jpg" alt="Digital brain on a circuit board" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/5.jpg" alt="Responsive website across laptop, tablet and phone" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/6.jpg" alt="Media player app interface" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/7.jpg" alt="E-commerce shopping cart on a laptop" loading="lazy" width="800" height="600"></li>
+        <li><img src="img/8.jpg" alt="World map with connected locations" loading="lazy" width="800" height="600"></li>
+      </ul>
+    </section>
+
+    <section class="process" id="process">
+      <div class="wrap process-inner">
+        <div class="process-visual reveal"><div class="glow"></div><img src="img/app-iPhone.png" alt="V Web app shown on a smartphone" loading="lazy" width="420" height="860"></div>
+        <div class="reveal">
+          <span class="kicker">02 · How we work</span>
+          <h2>Simple as idea, prototyping, user testing.</h2>
+          <ol class="steps">
+            <li><span>1</span><p>We offer remote web application development services worldwide.</p></li>
+            <li><span>2</span><p>We specialise in making beautifully functioning web applications.</p></li>
+            <li><span>3</span><p>We use tools such as Crowdcast or Google Meet, and our approach follows the development sprint methodology.</p></li>
+          </ol>
+          <a class="button button-primary" href="#contact">Start a conversation <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sprint" id="sprint">
+      <div class="wrap">
+        <div class="section-head light reveal"><span class="kicker">03 · Development sprint</span><h2>One idea. Four days.<br>A tested prototype.</h2></div>
+        <div class="sprint-grid">
+          <article class="sprint-card reveal"><img src="img/day1.jpg" alt="Remote meeting illustration" loading="lazy" width="750" height="500"><div><span class="day">Day 1</span><ul><li>Meeting with the client</li><li>The client is the expert</li><li>Remote meeting</li></ul></div></article>
+          <article class="sprint-card reveal"><img src="img/day2.jpg" alt="Server and laptops illustration" loading="lazy" width="750" height="500"><div><span class="day">Day 2</span><ul><li>Creating a demo</li><li>Idea sketching</li><li>Remote meeting</li></ul></div></article>
+          <article class="sprint-card reveal"><img src="img/day3.jpg" alt="Connected devices illustration" loading="lazy" width="750" height="500"><div><span class="day">Day 3</span><ul><li>Heat-map</li><li>Storyboarding</li><li>Remote meeting</li></ul></div></article>
+          <article class="sprint-card reveal"><img src="img/day4.jpg" alt="Data analysis illustration" loading="lazy" width="750" height="500"><div><span class="day">Day 4</span><ul><li>Making the prototype</li><li>5+ user testing</li><li>Sprint review</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="kicker">Kind words</span><h2>Our clients can't live without us.</h2></div>
+        <div class="quote-grid">
+          <figure class="reveal"><blockquote>This agency is just awesome! I just launched a start-up which leaves me no time for development. Now that I'm used to it, I couldn't live without it in my daily work. Keep up the great work!</blockquote><figcaption><img src="img/customer-1.jpg" alt="" width="56" height="56" loading="lazy"><span><strong>Alberto Duncan</strong>Start-up founder</span></figcaption></figure>
+          <figure class="reveal featured"><blockquote>Inexpensive, valuable and great-looking web application, delivered right to my browser. We have lots of developers here in London, but no one comes even close to this agency. My start-up team and I are so in love!</blockquote><figcaption><img src="img/customer-2.jpg" alt="" width="56" height="56" loading="lazy"><span><strong>Joana Silva</strong>London</span></figcaption></figure>
+          <figure class="reveal"><blockquote>I was looking for a quick and easy web development service in London. I tried a lot of them and ended up using this agency. Best web application development service in the London area!</blockquote><figcaption><img src="img/customer-3.jpg" alt="" width="56" height="56" loading="lazy"><span><strong>Milton Chapman</strong>London</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans" id="plans">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="kicker">04 · Technical consultation</span><h2>Pick the level of expertise you need.</h2></div>
+        <div class="plan-grid">
+          <article class="plan reveal"><h3>Starter</h3><p class="price"><span>£399</span>/ per consultation</p><ul><li>Remote consultation</li><li>Low-level expertise</li><li>Call us 24/7</li><li>Free booking</li></ul><a class="button button-ghost-dark" href="#contact" data-plan="Starter">Contact us now</a></article>
+          <article class="plan plan-featured reveal"><span class="badge">Most popular</span><h3>Pro</h3><p class="price"><span>£699</span>/ per consultation</p><ul><li>Remote consultation</li><li>Mid-level expertise</li><li>Call us 24/7</li><li>Hands-on training</li></ul><a class="button button-primary" href="#contact" data-plan="Pro">Contact us now</a></article>
+          <article class="plan reveal"><h3>Premium</h3><p class="price"><span>£999</span>/ per consultation</p><ul><li>Remote consultation</li><li>High-level expertise</li><li>Call us 24/7</li><li>Advanced hands-on training</li></ul><a class="button button-ghost-dark" href="#contact" data-plan="Premium">Contact us now</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-inner">
+        <div class="contact-copy reveal">
+          <span class="kicker">05 · Contact us</span>
+          <h2>We're happy to hear from you.</h2>
+          <p>Tell us a little about your idea and we'll get back to you to arrange a remote consultation.</p>
+          <ul class="contact-points"><li><span>◎</span>Remote, worldwide</li><li><span>✦</span>Reply within one working day</li><li><span>✓</span>Free booking on every plan</li></ul>
+        </div>
+        <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Don’t fill this out: <input name="bot-field"></label></p>
+          <div class="field-row">
+            <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Your name"></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" name="email" required placeholder="you@example.com"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label for="plan">Interested in</label><select id="plan" name="plan"><option value="Not sure yet">Not sure yet</option><option value="Starter">Starter — £399</option><option value="Pro">Pro — £699</option><option value="Premium">Premium — £999</option></select></div>
+            <div class="field"><label for="find-us">How did you find us?</label><select id="find-us" name="find-us"><option value="friends">Friends</option><option value="search">Search engine</option><option value="ad">Advertisement</option><option value="other">Other</option></select></div>
+          </div>
+          <div class="field"><label for="message">Drop us a line</label><textarea id="message" name="message" required placeholder="A little about your project..."></textarea></div>
+          <label class="checkbox"><input type="checkbox" name="newsletter" value="yes" checked><span>Yes, please send me the newsletter</span></label>
+          <button class="button button-primary" type="submit">Send message <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><a class="brand" href="#top"><span class="brand-mark">V<span>.</span></span><span>web<br>development</span></a><p>Making good ideas feel at home on the web.</p><a href="#top">BACK TO TOP ↑</a><small>© 2026 V Web Development</small></footer>
-  <div class="chat-widget"><section class="chat-panel" id="chat-panel" aria-label="V Web assistant" hidden><div class="chat-header"><div class="chat-avatar">✳</div><div><strong>V Web assistant</strong><small><span class="status-dot"></span> Here to help you get started</small></div><button class="chat-close" type="button" aria-label="Close chat">×</button></div><div class="chat-body" id="chat-messages" aria-live="polite"><div class="chat-date">LET'S GET TO KNOW EACH OTHER</div><div class="bot-message">Hello there! 👋 I'm the V Web assistant. Have a question about working with us? Pick a topic below or ask away.</div><div class="quick-replies"><button type="button">What do you do?</button><button type="button">How does it work?</button><button type="button">How do I get started?</button></div></div><form class="chat-form"><label class="sr-only" for="chat-input">Your message</label><input id="chat-input" autocomplete="off" placeholder="Type your question..." required><button type="submit" aria-label="Send message">↑</button></form><div class="chat-note">A little help from V Web ✳</div></section><button class="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel"><span class="chat-bubble">✳</span><span>Let's chat <small>Have a question?</small></span><span class="launcher-arrow">↗</span></button></div>
-</body></html>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top"><img src="img/logo.png" alt="" width="40" height="40"><span>V Web<small>Development</small></span></a>
+      <nav aria-label="Footer"><a href="#services">What we do</a><a href="#process">How we work</a><a href="#sprint">Development sprint</a><a href="#contact">Join our company</a></nav>
+      <small>© 2026 V Web Development. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <div class="chat-widget"><section class="chat-panel" id="chat-panel" aria-label="V Web assistant" hidden><div class="chat-header"><div class="chat-avatar"><img src="img/logo.png" alt="" width="24" height="24"></div><div><strong>V Web assistant</strong><small><span class="status-dot"></span> Here to help you get started</small></div><button class="chat-close" type="button" aria-label="Close chat">×</button></div><div class="chat-body" id="chat-messages" aria-live="polite"><div class="chat-date">LET'S GET TO KNOW EACH OTHER</div><div class="bot-message">Hello there! 👋 I'm the V Web assistant. Have a question about working with us? Pick a topic below or ask away.</div><div class="quick-replies"><button type="button">What do you do?</button><button type="button">How does it work?</button><button type="button">How much does it cost?</button></div></div><form class="chat-form"><label class="sr-only" for="chat-input">Your message</label><input id="chat-input" autocomplete="off" placeholder="Type your question..." required><button type="submit" aria-label="Send message">↑</button></form><div class="chat-note">A little help from V Web</div></section><button class="chat-launcher" type="button" aria-expanded="false" aria-controls="chat-panel"><span class="chat-bubble">✦</span><span>Let's chat <small>Have a question?</small></span></button></div>
+</body>
+</html>
