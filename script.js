@@ -1,3 +1,4 @@
+const header = document.querySelector('#site-header');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
 menuButton.addEventListener('click', () => {
@@ -5,13 +6,36 @@ menuButton.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', String(open));
   menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
   navigation.classList.toggle('open', open);
+  header.classList.toggle('menu-open', open);
 });
 navigation.addEventListener('click', event => {
   if (event.target.closest('a')) {
     navigation.classList.remove('open');
+    header.classList.remove('menu-open');
     menuButton.setAttribute('aria-expanded', 'false');
     menuButton.setAttribute('aria-label', 'Open menu');
   }
+});
+
+function updateHeader() {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(element => revealObserver.observe(element));
+
+const planSelect = document.querySelector('#plan');
+document.querySelectorAll('[data-plan]').forEach(link => {
+  link.addEventListener('click', () => { planSelect.value = link.dataset.plan; });
 });
 
 const launcher = document.querySelector('.chat-launcher');
@@ -41,12 +65,12 @@ function addMessage(text, sender) {
 }
 function replyTo(question) {
   const text = question.toLowerCase();
-  if (/price|cost|pricing|budget|rate|how much/.test(text)) return 'The best way to discuss pricing is to tell us about your project using the contact form below. We can talk through what you need.';
-  if (/start|contact|hire|reach|talk|book/.test(text)) return 'We would love to hear about your idea! Use the contact form in the Say hello section to tell us about your project.';
-  if (/sprint|process|work|how|long|time/.test(text)) return 'We start with a remote conversation, then explore your idea with a demo and prototype. Our development sprint moves through discovery, sketching, storyboarding and user testing over four days.';
+  if (/price|cost|pricing|budget|rate|how much/.test(text)) return 'Our technical consultation plans are Starter (£399), Pro (£699) and Premium (£999) per consultation. See the Pricing section, or tell us about your project using the contact form.';
+  if (/start|contact|hire|reach|talk|book/.test(text)) return 'We would love to hear about your idea! Use the contact form in the Contact us section to tell us about your project.';
+  if (/sprint|process|work|how|long|time/.test(text)) return 'We start with a remote conversation, then explore your idea with a demo and prototype. Our development sprint moves through meeting, demo and sketching, heat-mapping and storyboarding, then a prototype tested with 5+ users over four days.';
   if (/service|what do you do|offer|website|web|app|mobile|build|design|prototype/.test(text)) return 'We help with remote technical consultation, web and mobile applications, demos, prototypes and user testing. Explore What we do for more details.';
   if (/hello|hi\b|hey/.test(text)) return 'Hello! Ask me about our services, process, pricing or how to get started.';
-  return 'I can help with questions about our services, process, pricing and getting started. For anything else, please tell us about it using the contact form in the Say hello section.';
+  return 'I can help with questions about our services, process, pricing and getting started. For anything else, please tell us about it using the contact form in the Contact us section.';
 }
 function sendQuestion(question) {
   const trimmed = question.trim();
